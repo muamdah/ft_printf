@@ -6,7 +6,7 @@
 /*   By: muamdah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/29 19:04:00 by muamdah           #+#    #+#             */
-/*   Updated: 2018/01/18 09:16:46 by muamdah          ###   ########.fr       */
+/*   Updated: 2018/04/17 16:01:19 by muamdah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,5 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 			d[i] = s[i];
 			i++;
 		}
-	return (dst);
+	return ((void *)d);
 }
