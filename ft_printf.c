@@ -16,12 +16,12 @@
 int		ft_printf(char *str)
 {
 	t_format f;
-	ft_conv(str, &f);
+	ft_struct_complet(str, &f);
 	return (0);
 }
 int		main()
 {
-	ft_printf("bonjour %hlld");
+	ft_printf("bonjour %0-+#12.152hlX");
 	//printf("% -d\n", 43);
 	return (0);
 }

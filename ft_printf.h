@@ -26,6 +26,7 @@ typedef struct s_format
 }              t_format;
 
 void    initialise_struct(t_format *f);
-void    ft_conv(char *str, t_format *f);
+void    ft_struct_complet(char *str, t_format *f);
+int     ft_recupint(char *str, int *i);
 int     ft_printf(char *str);
 #endif
