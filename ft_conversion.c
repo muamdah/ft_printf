@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_conversion.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: muamdah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/20 16:45:21 by muamdah           #+#    #+#             */
-/*   Updated: 2018/04/26 16:11:35 by muamdah          ###   ########.fr       */
+/*   Created: 2018/04/24 13:22:54 by muamdah           #+#    #+#             */
+/*   Updated: 2018/04/26 15:09:27 by muamdah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <stdio.h>
 #include "ft_printf.h"
 
-int		ft_printf(char *str)
+char *ft_conv_d(char *str, t_format *f)
 {
+	int i;
+	int j;
 	char *s;
 
-	t_format f;
-	ft_struct_complet(str, &f);
-	s = ft_conv_d(str, &f);
-	return (0);
-}
-int		main()
-{
-	ft_printf("bonjour %0-+#12d");
-	while(1)
-		;
-	//printf("% -d\n", 43);
-	return (0);
+	i = 0;
+	s = ft_strnew(1);
+	while (str[i] != '%')
+		i++;
+	j = i;
+	while (!(ft_strchr("d", str[j])))
+		j++;
+	s = ft_strsub(str, i, j - i);
+	printf("%s\n", ft_strsub(str, i , j - i + 1));
+	return (s);
 }

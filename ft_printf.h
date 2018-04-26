@@ -6,7 +6,7 @@
 /*   By: muamdah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/22 12:56:39 by muamdah           #+#    #+#             */
-/*   Updated: 2018/04/02 16:31:51 by muamdah          ###   ########.fr       */
+/*   Updated: 2018/04/26 15:03:47 by muamdah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,5 @@ void    initialise_struct(t_format *f);
 void    ft_struct_complet(char *str, t_format *f);
 int     ft_recupint(char *str, int *i);
 int     ft_printf(char *str);
+char *	ft_conv_d(char *str, t_format *f);
 #endif
